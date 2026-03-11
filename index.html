@@ -88,9 +88,7 @@
                         <a href="https://github.com/ansoncjm/PortfolioProjects/blob/main/RevoGrocers%20Sales%20Performance%20Analysis.pdf" target="_blank" class="btn">Documentation</a>
                         <!--💡UPDATE: Add link to your live dashboard (e.g., Power BI, Tableau Public)-->
                         <a href="[YOUR_LIVE_DASHBOARD_URL]" target="_blank" class="btn btn-secondary">View Dashboard</a>
-                    </div>
-                </div>
-            </div>
+                        <button class="btn" onclick="openModal()">Project Details</button>
 
             <!-- Project 2 -->
             <div class="project-card">
@@ -277,7 +275,59 @@
     </div>
 </footer>
 
+<!-- PROJECT MODAL -->
+<div id="projectModal" class="modal">
+
+  <div class="modal-content">
+
+    <span class="close" onclick="closeModal()">&times;</span>
+
+    <h2>RevoGrocers Sales Performance Analysis</h2>
+
+    <p>
+      This project analyzes 4.4B in total revenue using SQL to identify
+      top-performing product categories and customer purchasing behavior.
+    </p>
+
+    <h3>Tools Used</h3>
+    <ul>
+      <li>SQL</li>
+      <li>Data Analysis</li>
+      <li>Business Metrics</li>
+    </ul>
+
+    <h3>Key Insights</h3>
+    <ul>
+      <li>Confections generated $574M revenue.</li>
+      <li>Repeat purchase rate reached 99.85%.</li>
+      <li>Top wholesale account value reached $134K.</li>
+    </ul>
+
+  </div>
+
+</div>
+
+<script>
+
+function openModal(){
+    document.getElementById("projectModal").style.display = "block";
+}
+
+function closeModal(){
+    document.getElementById("projectModal").style.display = "none";
+}
+
+window.onclick = function(event){
+    const modal = document.getElementById("projectModal");
+    if(event.target == modal){
+        modal.style.display = "none";
+    }
+}
+
+</script>
+                        
 <script src="assets/js/main.js"></script>
+                        
 
 </body>
 </html>
